@@ -73,7 +73,7 @@ int max_number(int *arr, int n)
     {
         if(max < arr[i])
         {
-            max = arr[i];
+            max = arr[i]; // Assign max = arr[i]
         }
     }
 
@@ -84,9 +84,9 @@ int max_number(int *arr, int n)
 int sum_of_array(int *arr, int n)
 {
     int sum = 0 ;
-    for (int i = 1; i <= n; i++)
+    for (int i = 1; i <= n; i++) // Run i from 1 to n
     {
-        sum += i;
+        sum += i;   // sum = sum + i
     }
 
     return sum;
