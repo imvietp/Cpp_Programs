@@ -8,10 +8,10 @@ using namespace std;
 // Right Half Pyramid Pattern
 void right_half_pyramid()
 {
-    int row = 5;
-    for (int i = 1; i <= row ;i++)
+    int row = 5;   // 5 layers of pyramid
+    for (int i = 1; i <= row ;i++)   // scan first to fifth layer or pyramid
     {
-        for (int j = 1; j <= i; j++)
+        for (int j = 1; j <= i; j++)  // loop 1 to i to add *
         {
             cout << "* " ;
         }
@@ -24,33 +24,34 @@ void right_half_pyramid()
 // Left Half Pyramid Pattern
 void left_half_pyramid()
 {
-    int row = 5;
-    for (int i = 1; i <= row; i++)
+    int row = 5;  // 5 layers of pyramid
+    for (int i = 1; i <= row; i++)    // scan first to fifth layer or pyramid
     {
-        for (int j = row; j >= 0; j--){
+        for (int j = row; j >= 0; j--)  // loop j to add * (loop each rows , layer)
+        {   
             if (j < i) {
-                cout << "*";
+                cout << "*"; // If j < i, print *
             }
             else {
-                cout << " ";
+                cout << " "; // If j >= i, print space
             }
         }
         cout << "\n";
     }
 }
 
-// Full
+// Full pyramid
 void full_pyramid()
 {
-    int row = 10;
-    for (int i = 1; i <= row/2; i++)
+    int row = 5;  // 5 layers of diamond
+    for (int i = 1; i <= row; i++)  // Loop i = 1 to the amount layers of row
     {
-        for (int j = 0; j < 2*row - i; j++)
+        for (int j = 0; j < row - i; j++)  // Loop j = 0 to row - i to print space in each row
         {
             cout << " ";
         }
 
-        for (int j = 1; j <= i; j++)
+        for (int j = 1; j <= i; j++) // Loop j = 1 to i to print * in each row
         {
             cout << "* ";
         }
@@ -62,8 +63,8 @@ void full_pyramid()
 // Full diamond
 void full_diamond()
 {
-    int row = 10;   // 10 rows in diamond      
-    for (int i = 1; i <= row/2; i++)  // Loop to check row 1 to 5 (Half above diamond)
+    int row = 5;   // 10 rows in diamond      
+    for (int i = 1; i <= row; i++)  // Loop to check row 1 to 5 (Half above diamond)
     {
         for (int j = 0; j < row - i; j++)    // j from 0 to under row - i: print spaces
         {
@@ -78,7 +79,7 @@ void full_diamond()
         
     }
 
-    for (int i = 5; i >= 1; i--)    // Loop to check row 5 to 10 (Half under diamond)
+    for (int i = row; i >= 1; i--)    // Loop to check row 5 to 10 (Half under diamond)
     {
          for(int j = 0; j <= row - i; j++)   // j from 0 to under row - i: print spaces
         {
@@ -96,15 +97,15 @@ void full_diamond()
 // Inverted Pyramid Pattern
 void inverted_pyramid()
 {
-    int row = 5;
-    for (int i = 1; i <= row ;i++)
+    int row = 5;  // Number of rows in the inverted pyramid
+    for (int i = 1; i <= row ;i++)   // Loop for each row starting from the top
     {
-        for (int j = row; j >= i; j--)
+        for (int j = row; j >= i; j--)  // Loop to print asterisks in each row
         {
-            cout << "* " ;
+            cout << "* " ; // Print an asterisk followed by a space
         }
         
-        cout << endl;
+        cout << endl; // Move to the next line after printing all asterisks in the row
     }
     
 }
@@ -113,51 +114,50 @@ void inverted_pyramid()
 void inverted_pyramid_number()
 {
     int row = 5;
-    for (int i = row; i >= 1 ;i--)
+    for (int i = row; i >= 1 ;i--) // Loop for each row starting from the top
     {
-        for (int j = 1; j <= i; j++)
+        for (int j = 1; j <= i; j++) // Loop to print numbers in each row
         {
-            cout << j << " " ;
+            cout << j << " " ; // Print the current number followed by a space
         }
         
-        cout << endl;
+        cout << endl; // Move to the next line after printing all numbers in the row
     }
-    
 }
 
 // Program to print inverted full pyramid using ” * “
 void inverted_full_pyramid()
 {
-    int row = 5;
-    for (int i = row; i >= 1; i--)
+    int row = 5; // Number of rows in the inverted full pyramid
+    for (int i = row; i >= 1; i--) // Loop for each row starting from the top
     {
-        for(int j = 0; j <= row - i; j++)
+        for(int j = 0; j <= row - i; j++) // Loop to print leading spaces in each row
         {
-            cout << " ";
+            cout << " "; // Print a space for each leading space in the row
         }
 
-        for (int j = 1; j <= i ; j++)
+        for (int j = 1; j <= i ; j++) // Loop to print asterisks in each row
         {
-            cout << "* ";
+            cout << "* "; // Print an asterisk followed by a space
         }
-        cout << endl;
+        cout << endl;  // Move to the next line after printing all characters in the row
     }  
 }
 
 // C++ Program To Print Character Pattern
 void character_pattern()
 {
-    int row = 5;
-    char character = 'A';
-    for (int i = 1; i <= row; ++i)
+    int row = 5;  // Number of rows in the pattern
+    char character = 'A';   // Starting character for the pattern
+    for (int i = 1; i <= row; ++i)  // Loop for each row starting from row 1
     {
-        for (int j = 1; j <= i; j++)
+        for (int j = 1; j <= i; j++)  // Loop to print characters in each row
         {
-            cout << character << " ";
+            cout << character << " "; // Print the current character followed by a space
             
         }
         cout << endl;
-        character++;
+        character++; // Move to the next character for the next row
     }
     
 }
@@ -165,16 +165,16 @@ void character_pattern()
 // C++ Program To Print Continuous Character Pattern
 void continuous_character_pattern()
 {
-    int row = 5;
-    char character = 'A';
-    for (int i = 1; i <= row; ++i)
+    int row = 5;   // Number of rows in the pattern
+    char character = 'A'; // Starting character for the pattern
+    for (int i = 1; i <= row; ++i)  // Loop for each row starting from row 1
     {
-        for (int j = 1; j <= i; j++)
+        for (int j = 1; j <= i; j++)  // Loop to print characters in each row
         {
-            cout << character << " ";
-            character++;
+            cout << character << " ";  // Print the current character followed by a space
+            character++;   // Move to the next character
         }
-        cout << endl;
+        cout << endl;  // Move to the next line after printing all characters in the row
         
     }
 }
