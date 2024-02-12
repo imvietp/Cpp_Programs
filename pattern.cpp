@@ -60,11 +60,66 @@ void full_pyramid()
     
 }
 
+// Inverted Pyramid Pattern
+void inverted_pyramid()
+{
+    int row = 5;
+    for (int i = 1; i <= row ;i++)
+    {
+        for (int j = row; j >= i; j--)
+        {
+            cout << "* " ;
+        }
+        
+        cout << endl;
+    }
+    
+}
 
+// Program to print an inverted half pyramid using numbers
+void inverted_pyramid_number()
+{
+    int row = 5;
+    for (int i = row; i >= 1 ;i--)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << j << " " ;
+        }
+        
+        cout << endl;
+    }
+    
+}
+
+// Program to print inverted full pyramid using ” * “
+void inverted_full_pyramid()
+{
+    int row = 5;
+    for (int i = row; i >= 1; i--)
+    {
+        for(int j = 0; j <= row - i; j++)
+        {
+            cout << " ";
+        }
+
+        for (int j = 1; j <= i ; j++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+        
+    }
+    
+}
 
 int main()
 {
     //right_half_pyramid();
     //left_half_pyramid();
-    full_pyramid();
+    //full_pyramid();
+    //inverted_pyramid();
+    //inverted_pyramid_number();
+    //inverted_full_pyramid();
+    
 }
