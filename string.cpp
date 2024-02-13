@@ -51,7 +51,18 @@ void combine_two_string()
     cin >> s2;
 
     cout << "Final is: " << s1 + s2;
+}
 
+void reverse_string(string *str)
+{
+    int n = (*str).size();
+    for (int i = 0; i < n/2; i++)
+    {
+        char temp = (*str)[i];
+        (*str)[i] = (*str)[n - i - 1];
+        (*str)[n - i - 1] = temp;
+    }
+    
 }
 
 void input()
@@ -59,13 +70,15 @@ void input()
     string str;
     cout << "Nhập chuỗi ký tự sau: ";
     cin >> str;
-    cout << "Dộ dài của chuỗi = " << length_of_string(str);
+    cout << "Dộ dài của chuỗi = " << length_of_string(str) << endl;
+    reverse_string(&str);
+    cout << "After swapping = " << str;
 
 }
 
 int main()
 {
-    //input();
+    input();
     //compare_two_string();
-    combine_two_string();
+    //combine_two_string();
 }
